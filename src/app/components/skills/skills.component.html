@@ -1,0 +1,39 @@
+<div class="row">
+<h1>Hard & Soft Skills</h1>
+<div class="col-lg-2">
+  <button type="button" routerLink="/newskill" class="btn btn-dark" *ngIf="IsLogged">Nueva Skill</button>
+</div>
+</div>
+<div class="row">
+  <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skills of skills">
+    <circle-progress
+      [percent]="(skills.porcentaje)"
+      [radius]="95"
+      [showUnits]="false"
+      [title]="(skills.nombre)"
+      [titleColor]="'black'"
+      [titleFontSize]="'1.5em'"
+      [showSubtitle]="false"
+      [outerStrokeWidth]="12"
+      [innerStrokeWidth]="4"
+      [outerStrokeColor]="'orange'"
+      [innerStrokeColor]="'#C7E596'"
+      [animation]="true"
+      [animationDuration]="1200"
+    ></circle-progress>
+
+    <div>
+      <td *ngIf="IsLogged">
+        <button class="btn btn-light" routerLink="/editskills/{{skills.id}}">
+          <i class="bi bi-pencil-fill"></i>
+        </button>
+      </td>
+      <td *ngIf="IsLogged">
+        <button class="btn btn-danger" (click)="delete(skills.id)">
+          <i class="bi bi-trash-fill"></i>
+        </button>
+      </td>
+    </div>
+  </div>
+</div>
+

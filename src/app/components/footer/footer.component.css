@@ -1,0 +1,13 @@
+.row{
+    padding: 60px;
+}
+div{
+    background-color: rgb(190, 190, 177);
+}
+footer{
+    color: rgb(68, 66, 66);
+    font-size: 14x;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}

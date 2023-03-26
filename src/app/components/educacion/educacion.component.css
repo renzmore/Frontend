@@ -1,0 +1,9 @@
+.row{
+    padding: 60px;
+}
+div{
+    background-color: rgb(190, 190, 177);
+}
+h2, h3{
+    display:block;
+}

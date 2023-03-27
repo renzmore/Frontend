@@ -9,7 +9,7 @@ export const environment = {
     messagingSenderId: '203688808149',
   },
 
-    production: false,
-    URL: 'http://localhost:8080/'
+    production: true,
+    URL: 'https://backendrender-n174.onrender.com/'
   };
   
